@@ -37,13 +37,3 @@ const invokeAction = async ({action, id, name, phone, email}) => {
 
 invokeAction(argv);
 
-// const actionIndex = process.argv.indexOf("--action");
-// if(actionIndex !== -1) {
-//     const actionType = process.argv[actionIndex + 1];
-//     invokeAction({actionType});
-// }
-// invokeAction({action: "list"});
-// invokeAction({action: "byId", id: "qdggE76Jtbfd9eWJHrssH"});
-// invokeAction({action: 'remove', id: "e6ywwRe4jcqxXfCZOj_1e"});
-// invokeAction({action: 'add', name: "anna", email: "akdjrhg@ggg.com", phone: "77777"});
-
