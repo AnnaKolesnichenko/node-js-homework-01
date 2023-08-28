@@ -4,10 +4,10 @@ const path = require('path');
 
 
 const contactsPath = path.resolve('db', 'contacts.json');
-async function writeContacts(contacts) {
-  await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
-  return;
-}
+// async function writeContacts(contacts) {
+//   await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
+//   return;
+// }
 
 const listContacts = async () => {
     const data = await fs.readFile(contactsPath, 'utf-8');
@@ -41,8 +41,8 @@ const addContact = async ({name, email, phone}) => {
         phone,
     }
     res.push(newContact);
-    writeContacts(res);
-    //await fs.writeFile(contactsPath, JSON.stringify(res, null, 2));
+    // writeContacts(res);
+    await fs.writeFile(contactsPath, JSON.stringify(res, null, 2));
     //in this part of code starts an infinite loop of adding same contact again and again
     return newContact;
   }
